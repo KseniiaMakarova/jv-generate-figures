@@ -14,6 +14,6 @@ public class Circle extends Figure{
     @Override
     public void draw() {
         System.out.printf(DRAW_PATTERN + "радиус: %d см, длина окружности: %.1f см.\n",
-                "круг", area, color, radius, getCircumference());
+                "круг", getArea(), getColor(), radius, getCircumference());
     }
 }

@@ -8,19 +8,19 @@ public class Trapeze extends Figure {
         this.lowerBaseLength = lowerBaseLength;
         this.sideLength = sideLength;
         this.angleAlpha = angleAlpha;
-        area = sideLength * Math.sin(angleAlpha)
-                * (lowerBaseLength - sideLength * Math.cos(angleAlpha));
+        area = sideLength * Math.sin(Math.toRadians(angleAlpha))
+                * (lowerBaseLength - sideLength * Math.cos(Math.toRadians(angleAlpha)));
     }
 
     public double getTopBaseLength() {
-        return lowerBaseLength - 2 * sideLength * Math.cos(angleAlpha);
+        return lowerBaseLength - 2 * sideLength * Math.cos(Math.toRadians(angleAlpha));
     }
 
     @Override
     public void draw() {
-        System.out.printf(DRAW_PATTERN + "нижнее основание: %d см, боковая сторона: %d см, "
+        System.out.printf(DRAW_PATTERN + "нижнее основание: %d см, боковая сторона: %d см, угол: %d°, "
                         + "верхнее основание: %.1f см.\n",
-                "равнобедренная трапеция", area, color, lowerBaseLength, sideLength,
-                getTopBaseLength());
+                "равнобедренная трапеция", getArea(), getColor(), lowerBaseLength, sideLength,
+                angleAlpha, getTopBaseLength());
     }
 }

@@ -14,6 +14,6 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.printf(DRAW_PATTERN + "длина стороны: %d см, периметр: %d см.\n",
-                "квадрат", area, color, sideLength, getPerimeter());
+                "квадрат", getArea(), getColor(), sideLength, getPerimeter());
     }
 }

@@ -16,7 +16,7 @@ public class Triangle extends Figure {
     @Override
     public void draw() {
         System.out.printf(DRAW_PATTERN + "катеты: %d и %d см, гипотенуза: %.1f см.\n",
-                "прямоугольный треугольник", area, color, legOneLength, legTwoLength,
+                "прямоугольный треугольник", getArea(), getColor(), legOneLength, legTwoLength,
                 getHypotenuse());
     }
 }
