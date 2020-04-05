@@ -1,15 +1,14 @@
 public class Trapeze extends Figure {
-    int lowerBaseLength;
-    int sideLength;
-    int angleAlpha;
+    private int lowerBaseLength;
+    private int sideLength;
+    private int angleAlpha;
 
     public Trapeze(String color, int lowerBaseLength, int sideLength, int angleAlpha) {
-        super(color);
+        super(color, sideLength * Math.sin(Math.toRadians(angleAlpha))
+                * (lowerBaseLength - sideLength * Math.cos(Math.toRadians(angleAlpha))));
         this.lowerBaseLength = lowerBaseLength;
         this.sideLength = sideLength;
         this.angleAlpha = angleAlpha;
-        area = sideLength * Math.sin(Math.toRadians(angleAlpha))
-                * (lowerBaseLength - sideLength * Math.cos(Math.toRadians(angleAlpha)));
     }
 
     public double getTopBaseLength() {

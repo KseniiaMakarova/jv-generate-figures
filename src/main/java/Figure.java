@@ -1,10 +1,11 @@
 public abstract class Figure {
-    String color;
-    double area;
-    static final String DRAW_PATTERN = "Фигура: %s, площадь: %.1f кв.см, цвет: %s, ";
+    private String color;
+    private double area;
+    protected static final String DRAW_PATTERN = "Фигура: %s, площадь: %.1f кв.см, цвет: %s, ";
 
-    public Figure(String color) {
+    public Figure(String color, double area) {
         this.color = color;
+        this.area = area;
     }
 
     public abstract void draw();

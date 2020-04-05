@@ -1,10 +1,9 @@
 public class Rectangle extends Figure {
-    int sideLength;
+    private int sideLength;
 
     public Rectangle(String color, int sideLength) {
-        super(color);
+        super(color, Math.pow(sideLength, 2));
         this.sideLength = sideLength;
-        area = Math.pow(sideLength, 2);
     }
 
     public int getPerimeter() {

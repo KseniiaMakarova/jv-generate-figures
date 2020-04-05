@@ -1,12 +1,11 @@
 public class Triangle extends Figure {
-    int legOneLength;
-    int legTwoLength;
+    private int legOneLength;
+    private int legTwoLength;
 
     public Triangle(String color, int legOneLength, int legTwoLength) {
-        super(color);
+        super(color, legOneLength * legTwoLength / 2.0);
         this.legOneLength = legOneLength;
         this.legTwoLength = legTwoLength;
-        area = legOneLength * legTwoLength / 2.0;
     }
 
     public double getHypotenuse() {

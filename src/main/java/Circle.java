@@ -1,10 +1,9 @@
 public class Circle extends Figure{
-    int radius;
+    private int radius;
 
     public Circle(String color, int radius) {
-        super(color);
+        super(color, Math.PI * Math.pow(radius, 2));
         this.radius = radius;
-        area = Math.PI * Math.pow(radius, 2);
     }
 
     public double getCircumference() {
