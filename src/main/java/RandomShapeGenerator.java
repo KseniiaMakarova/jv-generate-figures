@@ -1,8 +1,7 @@
-public class Generator {
-    public void generate() {
-        int arrayLength = getRandomNumber(1, 10);
-        Figure[] figures = new Figure[arrayLength];
-        for (int i = 0; i < arrayLength; i++) {
+public class RandomShapeGenerator {
+    public void drawRandomShapes(int countOfShapes) {
+        Figure[] figures = new Figure[countOfShapes];
+        for (int i = 0; i < countOfShapes; i++) {
             switch (getRandomNumber(1, 4)) {
                 case 1:
                     figures[i] = new Circle(getRandomColor(), getRandomNumber(5, 20));
@@ -25,7 +24,7 @@ public class Generator {
         }
     }
 
-    private int getRandomNumber(int from, int to) {
+    public int getRandomNumber(int from, int to) {
         return (int) (Math.random() * (to - from + 1)) + from;
     }
 
