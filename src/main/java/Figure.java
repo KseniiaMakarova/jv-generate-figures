@@ -1,18 +1,14 @@
 public abstract class Figure {
-    private String color;
-    private double area;
     protected static final String DRAW_PATTERN = "Фигура: %s, площадь: %.1f кв.см, цвет: %s, ";
+    protected String color;
 
-    public Figure(String color, double area) {
+    public Figure(String color) {
         this.color = color;
-        this.area = area;
     }
 
     public abstract void draw();
 
-    public double getArea() {
-        return area;
-    }
+    public abstract double getArea();
 
     public String getColor() {
         return color;

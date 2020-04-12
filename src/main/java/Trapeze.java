@@ -4,8 +4,7 @@ public class Trapeze extends Figure {
     private int angleAlpha;
 
     public Trapeze(String color, int lowerBaseLength, int sideLength, int angleAlpha) {
-        super(color, sideLength * Math.sin(Math.toRadians(angleAlpha))
-                * (lowerBaseLength - sideLength * Math.cos(Math.toRadians(angleAlpha))));
+        super(color);
         this.lowerBaseLength = lowerBaseLength;
         this.sideLength = sideLength;
         this.angleAlpha = angleAlpha;
@@ -13,6 +12,12 @@ public class Trapeze extends Figure {
 
     public double getTopBaseLength() {
         return lowerBaseLength - 2 * sideLength * Math.cos(Math.toRadians(angleAlpha));
+    }
+
+    @Override
+    public double getArea() {
+        return sideLength * Math.sin(Math.toRadians(angleAlpha))
+                * (lowerBaseLength - sideLength * Math.cos(Math.toRadians(angleAlpha)));
     }
 
     @Override
