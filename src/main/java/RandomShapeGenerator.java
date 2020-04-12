@@ -29,19 +29,6 @@ public class RandomShapeGenerator {
     }
 
     private String getRandomColor() {
-        switch (getRandomNumber(1, 5)) {
-            case 1:
-                return "синий";
-            case 2:
-                return "розовый";
-            case 3:
-                return "красный";
-            case 4:
-                return "лиловый";
-            case 5:
-                return "золотистый";
-            default:
-        }
-        return null;
+        return Colors.values()[getRandomNumber(0, 4)].name();
     }
 }
